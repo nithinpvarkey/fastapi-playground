@@ -8,7 +8,7 @@ class Players(BaseModel):
     name: str
     team: str
 ```
-Model Creation: Players inherits from BaseModel which gives data parsing and validation features.
+***Model*** Creation: Players inherits from BaseModel which gives data parsing and validation features.
 
 ```python
 @app.get("/players/{team_id}")
@@ -21,6 +21,6 @@ async def team_player(team_id: int ) -> Players:
         
     return team
 ```
-Data Parsing: When Players(**player_data) is used, Pydantic automatically converts and validates player_data to match the Players schema (id as int, name and team as str).
+***Data Parsing***: When Players(**player_data) is used, Pydantic automatically converts and validates player_data to match the Players schema (id as int, name and team as str).
 
-Automatic Validation: If you pass incorrect data types, Pydantic raises errors.
+***Automatic Validation***: If you pass incorrect data types, Pydantic raises errors.
